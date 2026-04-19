@@ -44,7 +44,7 @@ export function DataTable<T extends { id: string }>({ data, columnas }: DataTabl
                 {idEditando === fila.id
                   ? <input
                       value={String(editando?.[col.key] ?? '')}
-                      onChange={e => setEditando(prev => ({ ...prev, [col.key]: e.target.value }))}
+                    onChange={e => setEditando(prev => prev ? { ...prev, [col.key]: e.target.value } as Partial<T> : null)}
                       style={{ width: '100%' }}
                     />
                   : String(fila[col.key])

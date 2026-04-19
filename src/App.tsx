@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { diasEntre } from './utils/fechas'
 import { DataTable } from './components/DataTable'
 
